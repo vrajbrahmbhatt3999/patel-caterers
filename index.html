@@ -1,0 +1,1605 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Patel Caterers — Royal Catering & Memorable Events</title>
+  <meta name="description"
+    content="Patel Caterers offers luxurious culinary craftsmanship and royal banquet experiences for weddings, corporate galas, and bespoke celebrations." />
+  <meta name="keywords"
+    content="Patel Caterers, royal catering, wedding catering, corporate events, live counters, gourmet banquet" />
+  <meta name="theme-color" content="#231810" />
+  <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/images/favicon.png" />
+  <meta property="og:image" content="assets/images/logo.png" />
+
+  <!-- Google Fonts: Cormorant Garamond (Editorial Luxury Serif) & Plus Jakarta Sans (Modern Clean Sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+
+  <!-- Tailwind CSS v3 via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            espresso: {
+              DEFAULT: '#231810',
+              deep: '#1b120b',
+              light: '#2c1e14',
+            },
+            cream: {
+              DEFAULT: '#efebe4',
+              light: '#f7f4ee',
+              card: '#f9f7f2',
+            },
+            gold: {
+              DEFAULT: '#de9c52',
+              hover: '#f1b36d',
+              dark: '#af812a',
+              muted: '#d4aa7d',
+            },
+            charcoal: {
+              DEFAULT: '#3a2b20',
+              muted: '#6e6259',
+            }
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Stylesheet with animations & glassmorphism -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="bg-cream text-charcoal font-sans antialiased overflow-x-hidden selection:bg-gold selection:text-white">
+
+  <!-- =========================================================================
+       1. LUXURY HEADER & NAVIGATION (Over Hero & Sticky)
+       ========================================================================= -->
+  <header id="main-nav"
+    class="fixed top-0 left-0 w-full z-50 transition-all duration-300 py-4 sm:py-5 lg:py-6 px-4 sm:px-8 lg:px-16 flex items-center justify-between">
+    <!-- Left Navigation Links (Desktop) -->
+    <nav
+      class="hidden xl:flex items-center space-x-6 2xl:space-x-8 text-xs font-semibold tracking-widest uppercase text-white/90">
+      <a href="#hero" class="text-gold border-b-2 border-gold pb-1 transition-colors hover:text-gold">Home</a>
+      <a href="#about" class="hover:text-gold transition-colors pb-1">About</a>
+      <a href="#services" class="hover:text-gold transition-colors pb-1">Events</a>
+      <a href="#menu" class="hover:text-gold transition-colors pb-1">Menu</a>
+      <a href="#process" class="hover:text-gold transition-colors pb-1">Process</a>
+      <a href="#chefs" class="hover:text-gold transition-colors pb-1">Chefs</a>
+      <a href="#gallery" class="hover:text-gold transition-colors pb-1">Gallery</a>
+      <a href="#contact" class="hover:text-gold transition-colors pb-1">Contact</a>
+    </nav>
+
+    <!-- Center Brand Logo -->
+    <a href="#hero" class="flex items-center group py-1" aria-label="Patel Caterers Home">
+      <img src="assets/images/logo.png" srcset="assets/images/logo.png 1x, assets/images/logo@2x.png 2x"
+        alt="Patel Caterers"
+        class="h-10 sm:h-12 lg:h-14 xl:h-16 max-h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-105 filter drop-shadow-md" fetchpriority="high" decoding="async" />
+    </a>
+
+    <!-- Right Header Actions (Phone, Get A Quote CTA & Hamburger) -->
+    <div class="flex items-center space-x-3 sm:space-x-4 lg:space-x-6">
+      <a href="tel:+919979040333"
+        class="hidden sm:flex items-center gap-2 text-white/90 hover:text-gold text-xs font-semibold tracking-wider transition-colors"
+        title="Call Patel Caterers">
+        <svg class="w-4 h-4 text-gold shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+        </svg>
+        <span class="hidden md:inline">+91 99790 40333</span>
+      </a>
+
+      <a href="#contact"
+        class="btn-pill-gold text-[11px] sm:text-xs tracking-wider uppercase py-2 px-3.5 sm:py-2.5 sm:px-5">
+        <span>Get Quote</span>
+        <svg class="w-3.5 h-3.5 hidden sm:inline" fill="none" stroke="currentColor" stroke-width="2.5"
+          viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+        </svg>
+      </a>
+
+      <!-- Mobile Hamburger Toggle Button -->
+      <button id="mobile-menu-btn"
+        class="xl:hidden text-white p-1.5 focus:outline-none hover:text-gold transition-colors"
+        aria-label="Open Mobile Menu">
+        <svg class="w-7 h-7 text-gold" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Backdrop Overlay -->
+  <div id="mobile-menu-backdrop"
+    class="fixed inset-0 bg-black/75 backdrop-blur-sm z-40 opacity-0 pointer-events-none transition-opacity duration-300"
+    aria-hidden="true"></div>
+
+  <!-- Mobile Drawer Menu -->
+  <div id="mobile-menu-drawer"
+    class="fixed inset-y-0 right-0 w-80 max-w-[85vw] bg-espresso z-50 transform translate-x-full transition-transform duration-300 ease-out shadow-2xl p-6 sm:p-8 flex flex-col justify-between overflow-y-auto">
+    <div>
+      <div class="flex items-center justify-between pb-6 border-b border-white/10 mb-8">
+        <a href="#hero" class="flex items-center" aria-label="Patel Caterers Home">
+          <img src="assets/images/logo.png" srcset="assets/images/logo.png 1x, assets/images/logo@2x.png 2x"
+            alt="Patel Caterers" class="h-10 w-auto object-contain filter drop-shadow-md" loading="lazy" decoding="async" />
+        </a>
+        <button id="close-mobile-menu" class="text-white/70 hover:text-gold p-1" aria-label="Close Mobile Menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <nav class="flex flex-col space-y-5 text-sm uppercase tracking-widest font-medium text-white/80">
+        <a href="#hero" class="mobile-nav-link text-gold hover:text-gold transition-colors">Home</a>
+        <a href="#about" class="mobile-nav-link hover:text-gold transition-colors">About Us</a>
+        <a href="#services" class="mobile-nav-link hover:text-gold transition-colors">Event Services</a>
+        <a href="#menu" class="mobile-nav-link hover:text-gold transition-colors">Catering Menus</a>
+        <a href="#process" class="mobile-nav-link hover:text-gold transition-colors">Our Process</a>
+        <a href="#chefs" class="mobile-nav-link hover:text-gold transition-colors">Master Chefs</a>
+        <a href="#gallery" class="mobile-nav-link hover:text-gold transition-colors">Event Gallery</a>
+        <a href="#reviews" class="mobile-nav-link hover:text-gold transition-colors">Reviews</a>
+        <a href="#contact" class="mobile-nav-link hover:text-gold transition-colors">Contact & Booking</a>
+      </nav>
+    </div>
+
+    <div class="pt-8 border-t border-white/10 space-y-4">
+      <a href="tel:+919979040333" class="flex items-center gap-2 text-white/90 text-sm font-semibold">
+        <svg class="w-4 h-4 text-gold shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+        </svg>
+        <span>+91 99790 40333</span>
+      </a>
+      <a href="#contact" class="btn-pill-gold w-full text-center text-xs tracking-wider uppercase">
+        Get A Quote ➔
+      </a>
+    </div>
+  </div>
+
+
+  <!-- =========================================================================
+       2. HERO SECTION (Centered Cinematic Royal Video Banner)
+       ========================================================================= -->
+  <section id="hero"
+    class="relative bg-black min-h-[90vh] sm:min-h-[92vh] lg:min-h-screen pt-28 pb-16 sm:pt-36 sm:pb-20 lg:pt-44 lg:pb-24 px-4 sm:px-8 lg:px-16 overflow-hidden flex flex-col justify-center items-center text-center">
+
+    <!-- Hero Background Video: Pristine 1080p H.264 Faststart | Hardware-Accelerated Smooth Playback -->
+    <video id="hero-bg-video"
+      autoplay muted loop playsinline
+      preload="auto"
+      poster="assets/images/web/luxury_banquet_poster.jpg"
+      disablepictureinpicture
+      x-webkit-airplay="deny"
+      class="z-0 pointer-events-none">
+      <source src="assets/videos/luxury_wedding_banquet.mp4" type="video/mp4" />
+    </video>
+
+    <!-- Crystal Clear HD Luxury Overlay: keeps banquet video vibrant, bright & sharp while ensuring text pops -->
+    <div class="absolute inset-0 z-0 pointer-events-none"
+      style="background: linear-gradient(180deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.08) 35%, rgba(0, 0, 0, 0.14) 65%, rgba(0, 0, 0, 0.50) 100%);">
+    </div>
+
+    <!-- Center Content -->
+    <div class="relative z-10 max-w-5xl mx-auto flex flex-col items-center">
+
+      <!-- Prestige Eyebrow Badge -->
+      <div
+        class="inline-flex items-center gap-2 mb-4 sm:mb-6 px-4 sm:px-6 py-1.5 sm:py-2 rounded-full border border-gold bg-black/90 shadow-2xl">
+        <span class="w-2.5 h-2.5 rounded-full bg-gold animate-ping"></span>
+        <span class="text-gold font-bold text-[10px] sm:text-xs tracking-[0.2em] sm:tracking-[0.25em] uppercase">Estd
+          1995 ✦ Royal Gastronomy</span>
+      </div>
+
+      <!-- Grand Centered Headline with Multi-Layer Deep Contrast -->
+      <h1
+        class="font-serif text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-normal tracking-tight text-white leading-[1.1] sm:leading-[1.05] uppercase mb-4 sm:mb-6"
+        style="text-shadow: 0 4px 30px rgba(0,0,0,1), 0 2px 6px rgba(0,0,0,1), 0 0 40px rgba(0,0,0,0.85);">
+        Where Taste Meets <br class="hidden sm:inline" />
+        <span class="animate-gold-shimmer font-serif italic lowercase font-light">royalty</span>
+      </h1>
+
+      <!-- Punchy Subtitle with Deep Contrast Text Shadow -->
+      <p class="text-sm sm:text-lg lg:text-xl text-white/90 max-w-2xl mx-auto font-medium leading-relaxed mb-8 sm:mb-10 tracking-wide px-2"
+        style="text-shadow: 0 3px 14px rgba(0,0,0,1), 0 1px 4px rgba(0,0,0,1), 0 0 25px rgba(0,0,0,0.9);">
+        Curating legendary royal banquets, theatrical live counters, and exquisite pure vegetarian culinary artistry for
+        life’s grandest celebrations.
+      </p>
+
+      <!-- Action Buttons -->
+      <div
+        class="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4 mb-8 sm:mb-10 w-full sm:w-auto px-4 sm:px-0">
+        <a href="#contact"
+          class="btn-pill-gold text-xs tracking-wider uppercase shadow-[0_10px_30px_rgba(0,0,0,0.9)] px-8 py-3.5 sm:px-9 sm:py-4 text-center">
+          <span>Book Your Celebration</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+          </svg>
+        </a>
+        <a href="#menu"
+          class="px-7 py-3.5 sm:px-8 sm:py-4 rounded-full border border-gold/70 hover:border-gold hover:text-gold text-white text-xs tracking-wider uppercase font-semibold transition-all bg-black/85 hover:bg-black shadow-[0_10px_30px_rgba(0,0,0,0.9)] text-center">
+          Explore Signature Menus
+        </a>
+      </div>
+
+      <!-- Responsive Trust Dock Bar -->
+      <div
+        class="w-full max-w-3xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-6 p-4 sm:px-8 sm:py-4 rounded-2xl md:rounded-full bg-black/90 border border-gold/50 shadow-[0_15px_40px_rgba(0,0,0,0.9)] text-white/95 text-xs tracking-wider">
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2">
+          <span class="text-gold font-serif text-lg sm:text-xl font-bold">25+</span>
+          <span class="text-white/75 uppercase text-[10px] sm:text-[11px] font-medium">Years Legacy</span>
+        </div>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2">
+          <span class="text-gold font-serif text-lg sm:text-xl font-bold">5.2K+</span>
+          <span class="text-white/75 uppercase text-[10px] sm:text-[11px] font-medium">Royal Banquets</span>
+        </div>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2">
+          <span class="text-gold font-serif text-lg sm:text-xl font-bold">100%</span>
+          <span class="text-white/75 uppercase text-[10px] sm:text-[11px] font-medium">Pure Veg & Jain</span>
+        </div>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2">
+          <span class="text-gold font-serif text-base sm:text-xl font-bold">White-Glove</span>
+          <span class="text-white/75 uppercase text-[10px] sm:text-[11px] font-medium">Hospitality</span>
+        </div>
+      </div>
+
+      <!-- Cinematic Video Scene Switcher Controls -->
+      <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mt-6 sm:mt-8 z-20">
+        <button class="hero-video-tab active px-3.5 sm:px-5 py-1.5 rounded-full text-[10px] sm:text-xs font-semibold uppercase tracking-wider border border-gold bg-gold text-espresso shadow-lg transition-all cursor-pointer"
+          data-video-src="assets/videos/luxury_wedding_banquet.mp4"
+          data-poster="assets/images/web/luxury_banquet_poster.jpg">
+          ✦ Grand Royal Banquet
+        </button>
+        <button class="hero-video-tab px-3.5 sm:px-5 py-1.5 rounded-full text-[10px] sm:text-xs font-semibold uppercase tracking-wider border border-white/30 bg-black/80 text-white/90 hover:border-gold hover:text-gold transition-all cursor-pointer"
+          data-video-src="assets/videos/theatrical_live_chef.mp4"
+          data-poster="assets/images/web/luxury_banquet_poster.jpg">
+          ✦ Live Theatrical Counter
+        </button>
+        <button class="hero-video-tab px-3.5 sm:px-5 py-1.5 rounded-full text-[10px] sm:text-xs font-semibold uppercase tracking-wider border border-white/30 bg-black/80 text-white/90 hover:border-gold hover:text-gold transition-all cursor-pointer"
+          data-video-src="assets/videos/hero_catering_reel.mp4"
+          data-poster="assets/images/web/video_bg.jpg">
+          ✦ Heritage Banquet Reel
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       INFINITE LUXURY MARQUEE RIBBON (Continuous In-Design Animation)
+       ========================================================================= -->
+  <div class="relative bg-espresso-deep py-3.5 overflow-hidden border-y border-gold/30 z-20">
+    <div
+      class="marquee-track flex items-center gap-10 whitespace-nowrap text-xs uppercase tracking-[0.24em] font-semibold text-white/90">
+      <span class="flex items-center gap-3"><span class="text-gold">✦</span> ROYAL WEDDING BANQUETS</span>
+      <span class="flex items-center gap-3"><span class="text-gold">✦</span> 100% PURE VEGETARIAN & JAIN</span>
+      <span class="flex items-center gap-3"><span class="text-gold">✦</span> THEATRICAL LIVE COUNTERS</span>
+      <span class="flex items-center gap-3"><span class="text-gold">✦</span> DESTINATION CATERING SPECIALISTS</span>
+      <span class="flex items-center gap-3"><span class="text-gold">✦</span> 30+ YEARS HERITAGE</span>
+      <span class="flex items-center gap-3"><span class="text-gold">✦</span> WHITE-GLOVE HOSPITALITY</span>
+      <span class="flex items-center gap-3"><span class="text-gold">✦</span> BESPOKE MENU CURATION</span>
+      <!-- Loop duplicate for seamless continuous ribbon -->
+      <span class="flex items-center gap-3"><span class="text-gold">✦</span> ROYAL WEDDING BANQUETS</span>
+      <span class="flex items-center gap-3"><span class="text-gold">✦</span> 100% PURE VEGETARIAN & JAIN</span>
+      <span class="flex items-center gap-3"><span class="text-gold">✦</span> THEATRICAL LIVE COUNTERS</span>
+      <span class="flex items-center gap-3"><span class="text-gold">✦</span> DESTINATION CATERING SPECIALISTS</span>
+      <span class="flex items-center gap-3"><span class="text-gold">✦</span> 30+ YEARS HERITAGE</span>
+      <span class="flex items-center gap-3"><span class="text-gold">✦</span> WHITE-GLOVE HOSPITALITY</span>
+      <span class="flex items-center gap-3"><span class="text-gold">✦</span> BESPOKE MENU CURATION</span>
+    </div>
+  </div>
+
+
+  <!-- =========================================================================
+       3. "WHO WE ARE" / ABOUT SECTION (Warm Cream Background with Floating Garnishes)
+       ========================================================================= -->
+  <section id="about" class="relative bg-cream pt-28 pb-24 lg:pt-36 lg:pb-32 px-6 lg:px-16 overflow-hidden">
+    <!-- Floating Decorative Garnish Elements (Continuous In-Design Float) -->
+    <div
+      class="floating-accent absolute top-16 right-12 md:right-24 w-12 md:w-16 opacity-80 pointer-events-none z-10 animate-garnish-1">
+      <img src="https://images.unsplash.com/photo-1518977676601-b53f82aba655?auto=format&fit=crop&w=150&q=80"
+        alt="Fresh Garnish Leaf" class="w-full h-auto rounded-full drop-shadow-md" loading="lazy" decoding="async" />
+    </div>
+    <div
+      class="floating-accent absolute bottom-24 left-10 md:left-20 w-10 md:w-14 opacity-75 pointer-events-none z-10 animate-garnish-2">
+      <img src="https://images.unsplash.com/photo-1592924357228-91a4daadcfea?auto=format&fit=crop&w=150&q=80"
+        alt="Culinary Accent" class="w-full h-auto rounded-full drop-shadow-md" loading="lazy" decoding="async" />
+    </div>
+
+    <!-- Section Header Centered -->
+    <div data-reveal="up" class="max-w-4xl mx-auto text-center mb-16">
+      <div class="badge-eyebrow-dark mb-3">
+        <span>✦</span>
+        <span>Who We Are</span>
+      </div>
+      <h2
+        class="font-serif text-3xl sm:text-5xl lg:text-6xl font-normal text-charcoal uppercase tracking-tight leading-tight">
+        Professional Catering Teams In Patel Caterers
+      </h2>
+    </div>
+
+    <!-- 3-Column Asymmetric Grid Layout -->
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12 items-center">
+
+      <!-- Left Column: Waiter Service Photo Card + Big Stat Counter -->
+      <div data-reveal="left" class="md:col-span-4 flex flex-col space-y-6">
+        <div class="relative overflow-hidden rounded-3xl shadow-xl group aspect-[4/3] img-zoom-container">
+          <img src="assets/images/web/about_team_brigade.jpg" alt="Royal Hospitality Brigade in Traditional Safas"
+            class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700" loading="lazy" decoding="async" />
+          <div class="absolute inset-0 bg-gradient-to-t from-charcoal/60 via-transparent to-transparent"></div>
+          <div class="absolute bottom-4 left-4 text-white">
+            <span class="text-xs uppercase tracking-widest text-gold font-semibold">Hospitality Brigade</span>
+            <p class="font-serif text-base">Royal White-Glove Service</p>
+          </div>
+        </div>
+
+        <!-- Big Highlight Metric with Counter Animation -->
+        <div class="luxury-card bg-cream-card p-8 rounded-3xl border border-charcoal/10 shadow-sm flex flex-col">
+          <div id="stat-counter-events"
+            class="font-serif text-5xl lg:text-6xl text-charcoal font-bold tracking-tight mb-1">
+            5.2<span class="text-gold">+</span>
+          </div>
+          <span class="text-xs uppercase tracking-widest text-charcoal/70 font-semibold">
+            Banquets & Events Hosted Annually
+          </span>
+          <p class="text-xs text-charcoal-muted mt-3 leading-relaxed">
+            From intimate gatherings to 10,000+ guest wedding feasts, delivering perfection across India and abroad.
+          </p>
+        </div>
+      </div>
+
+      <!-- Center Column: Core Philosophy & Button -->
+      <div data-reveal="up" class="delay-200 md:col-span-4 flex flex-col justify-center space-y-6 lg:px-2">
+        <h3 class="font-serif text-xl sm:text-2xl lg:text-3xl text-charcoal uppercase leading-snug font-medium">
+          Every event is a unique opportunity to craft a culinary experience as extraordinary as delicious.
+        </h3>
+
+        <p class="text-sm text-charcoal-muted leading-relaxed">
+          A meeting or celebration is a unique and unforgettable event! At Patel Caterers, our master chefs and
+          hospitality planners orchestrate bespoke menus, creative live counters, flawless execution, and warm Indian
+          hospitality.
+        </p>
+
+        <p class="text-sm text-charcoal-muted leading-relaxed">
+          We honor ancestral culinary recipes while infusing contemporary global fine dining techniques, ensuring every
+          bite delights your guests.
+        </p>
+
+        <div class="pt-2">
+          <a href="#about-modal" class="btn-pill-dark text-xs tracking-wider uppercase view-dish-trigger"
+            data-dish-key="wedding">
+            <span>Learn About Us</span>
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Column: Tall Arched Wedding Banquet Tablescape Photo -->
+      <div data-reveal="right" class="delay-300 md:col-span-4">
+        <div
+          class="relative overflow-hidden rounded-3xl shadow-2xl group aspect-[3/4] border-4 border-white img-zoom-container">
+          <img src="assets/images/web/about_hall_feature.jpg" alt="Grand Wedding Banquet Setup by Patel Caterers"
+            class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700" loading="lazy" decoding="async" />
+          <div class="absolute inset-0 bg-gradient-to-t from-charcoal/80 via-transparent to-transparent"></div>
+          <div class="absolute bottom-6 inset-x-6 text-white text-center">
+            <span class="text-xs uppercase tracking-widest text-gold font-semibold">Grand Banqueting</span>
+            <p class="font-serif text-xl mt-1">Immersive Dining Spaces</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =========================================================================
+       4. INTERACTIVE EVENT SERVICES SHOWCASE (Sticky Full-Bleed & Watermark Text)
+       ========================================================================= -->
+  <section id="services" class="relative bg-espresso py-28 lg:py-36 px-6 lg:px-16 overflow-hidden">
+    <!-- Background Image with Overlay -->
+    <div class="absolute inset-0 z-0 opacity-25">
+      <img id="service-bg-image" src="assets/images/web/service_wedding.jpg" alt="Service Ambient Backdrop"
+        class="w-full h-full object-cover transition-opacity duration-700" decoding="async" />
+    </div>
+    <div class="absolute inset-0 z-0 bg-gradient-to-b from-espresso via-espresso/90 to-espresso"></div>
+
+    <!-- Giant Watermark Typography Scrolling Across Section -->
+    <div
+      class="absolute inset-x-0 top-1/2 -translate-y-1/2 z-0 flex justify-center items-center pointer-events-none overflow-hidden whitespace-nowrap opacity-20">
+      <span class="watermark-text text-[120px] sm:text-[180px] lg:text-[240px] uppercase font-bold tracking-widest">
+        EVENTS & CATERING
+      </span>
+    </div>
+
+    <!-- Header -->
+    <div data-reveal="up" class="relative z-10 max-w-3xl mx-auto text-center mb-16">
+      <div class="badge-eyebrow mb-3">
+        <span>✦</span>
+        <span>Event Categories</span>
+      </div>
+      <h2 class="font-serif text-3xl sm:text-5xl lg:text-6xl text-white font-normal uppercase tracking-tight">
+        Bespoke Catering Experiences
+      </h2>
+    </div>
+
+    <!-- Center Floating Frosted Glass Service Card -->
+    <div data-reveal="zoom" class="relative z-10 max-w-xl mx-auto">
+      <div class="glass-panel-card p-8 sm:p-12 rounded-3xl shadow-2xl text-center text-white relative">
+
+        <div id="service-card-inner" class="transition-opacity duration-300 flex flex-col items-center">
+          <!-- Circular Thumbnail Photo with Autonomous Breathing Ring Border -->
+          <div
+            class="w-28 h-28 sm:w-36 sm:h-36 rounded-full overflow-hidden border-4 border-gold/70 shadow-xl mb-6 animate-ring-breathe">
+            <img id="service-circle-img" src="assets/images/web/service_wedding.jpg" alt="Service Showcase"
+              class="w-full h-full object-cover" decoding="async" />
+          </div>
+
+          <!-- Eyebrow Badge -->
+          <span id="service-card-badge" class="text-xs uppercase tracking-widest text-gold font-semibold mb-2">
+            DESTINATION & ROYAL
+          </span>
+
+          <!-- Heading -->
+          <h3 id="service-card-title"
+            class="font-serif text-3xl sm:text-4xl uppercase font-semibold text-white tracking-wide mb-2">
+            ROYAL WEDDINGS
+          </h3>
+
+          <p id="service-card-subtitle" class="text-xs uppercase tracking-widest text-white/70 mb-4 font-medium">
+            Grand Banquets & Multi-Course Celebrations
+          </p>
+
+          <!-- Description -->
+          <p id="service-card-desc" class="text-sm text-white/80 leading-relaxed font-light mb-8 max-w-md">
+            From sacred traditions to extravagant reception banquets, our culinary team orchestrates seamless royal
+            dining with bespoke decor pairings and personalized silverware.
+          </p>
+
+          <a href="#contact" class="btn-pill-gold text-xs tracking-wider uppercase">
+            <span>Book This Experience</span>
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </a>
+        </div>
+
+        <!-- Carousel Slider Controls (Left & Right Arrows) -->
+        <button id="service-prev-btn"
+          class="absolute -left-2 sm:-left-6 top-1/2 -translate-y-1/2 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-espresso/90 border border-gold/40 text-gold flex items-center justify-center hover:bg-gold hover:text-espresso transition-all shadow-xl z-20"
+          aria-label="Previous Slide">
+          <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+          </svg>
+        </button>
+        <button id="service-next-btn"
+          class="absolute -right-2 sm:-right-6 top-1/2 -translate-y-1/2 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-espresso/90 border border-gold/40 text-gold flex items-center justify-center hover:bg-gold hover:text-espresso transition-all shadow-xl z-20"
+          aria-label="Next Slide">
+          <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Slide Indicator Dots -->
+      <div class="flex justify-center items-center gap-2 mt-8">
+        <button class="service-dot h-2.5 w-8 rounded-full bg-amber-400 transition-all duration-300"
+          aria-label="Slide 1"></button>
+        <button class="service-dot h-2.5 w-2.5 rounded-full bg-white/40 hover:bg-white transition-all duration-300"
+          aria-label="Slide 2"></button>
+        <button class="service-dot h-2.5 w-2.5 rounded-full bg-white/40 hover:bg-white transition-all duration-300"
+          aria-label="Slide 3"></button>
+        <button class="service-dot h-2.5 w-2.5 rounded-full bg-white/40 hover:bg-white transition-all duration-300"
+          aria-label="Slide 4"></button>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =========================================================================
+       5. WHY CHOOSE US (Features & Floating Plate Dish Overlay)
+       ========================================================================= -->
+  <section class="relative bg-cream py-24 lg:py-32 px-6 lg:px-16 overflow-hidden">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+
+      <!-- Left Column: Content & Features -->
+      <div data-reveal="left" class="lg:col-span-7 flex flex-col space-y-8">
+        <div>
+          <div class="badge-eyebrow-dark mb-3">
+            <span>✦</span>
+            <span>Why Choose Us</span>
+          </div>
+          <h2
+            class="font-serif text-3xl sm:text-5xl lg:text-6xl text-charcoal font-normal uppercase tracking-tight leading-tight">
+            Unforgettable Catering For Any Occasion!
+          </h2>
+        </div>
+
+        <!-- 2 Features with Circle Line Icons -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-2">
+          <!-- Feature 1: Cloche Icon -->
+          <div class="flex items-start gap-4">
+            <div
+              class="w-14 h-14 rounded-full border-2 border-charcoal/20 flex items-center justify-center text-charcoal shrink-0 bg-white/60 shadow-sm">
+              <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M12 4v2m0 0a8 8 0 018 8H4a8 8 0 018-8zm-9 10h18a1 1 0 011 1v1a1 1 0 01-1 1H3a1 1 0 01-1-1v-1a1 1 0 011-1z" />
+              </svg>
+            </div>
+            <div>
+              <h4 class="font-serif text-lg font-bold uppercase text-charcoal tracking-wide mb-1">
+                PREMIUM DINING
+              </h4>
+              <p class="text-xs text-charcoal-muted leading-relaxed">
+                Allow customers to enjoy bespoke silver service, tailored tasting sessions, and automated instant
+                confirmation.
+              </p>
+            </div>
+          </div>
+
+          <!-- Feature 2: Fork & Spoon Icon -->
+          <div class="flex items-start gap-4">
+            <div
+              class="w-14 h-14 rounded-full border-2 border-charcoal/20 flex items-center justify-center text-charcoal shrink-0 bg-white/60 shadow-sm">
+              <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+              </svg>
+            </div>
+            <div>
+              <h4 class="font-serif text-lg font-bold uppercase text-charcoal tracking-wide mb-1">
+                ABUNDANT FLAVORS
+              </h4>
+              <p class="text-xs text-charcoal-muted leading-relaxed">
+                Our experienced culinary masters guide you through authentic royal traditions and global contemporary
+                fusion.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <p class="text-sm text-charcoal-muted leading-relaxed">
+          At Patel Caterers, dining is more than just eating, it's an immersive experience. We blend creativity,
+          authentic regional spice blends, and deep passion to bring you dishes that delight the senses. From our
+          carefully curated menu to our warm and inviting hospitality.
+        </p>
+
+        <div>
+          <a href="tel:+919979040333" class="btn-pill-dark text-xs tracking-wider uppercase">
+            <span>Call Us: +91 99790 40333</span>
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Column: Restaurant Photo with Floating 3D Delicacy Dish -->
+      <div data-reveal="right" class="lg:col-span-5 relative mt-6 lg:mt-0">
+        <div
+          class="relative overflow-hidden rounded-3xl shadow-2xl border-4 border-white aspect-[4/3] sm:aspect-[1/1] img-zoom-container">
+          <img src="assets/images/web/craft_banquet_hall.jpg" alt="World Fusion Floral Banquet Station"
+            class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700" loading="lazy" decoding="async" />
+          <div class="absolute inset-0 bg-gradient-to-t from-charcoal/40 via-transparent to-transparent"></div>
+        </div>
+
+        <!-- Floating 3D Plated Sirloin / Paneer Dish Overlay (Signature Anika Detail) -->
+        <div class="absolute -bottom-6 left-2 sm:-bottom-10 sm:-left-6 w-36 sm:w-52 animate-float-slow z-20">
+          <div class="relative">
+            <img src="assets/images/web/about_ponk_heritage.jpg" alt="Authentic Ponk & Heritage Delicacy Station"
+              class="w-full h-auto rounded-full border-4 border-white dish-shadow hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async" />
+            <div
+              class="absolute bottom-2 right-2 bg-charcoal text-white text-[9px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full shadow-md">
+              Heritage Live
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =========================================================================
+       6. CATERING MENUS / MOST POPULAR DISHES (4-Card Grid & Tabs)
+       ========================================================================= -->
+  <section id="menu" class="relative bg-cream-light py-24 lg:py-32 px-6 lg:px-16 border-t border-charcoal/5">
+    <div class="max-w-7xl mx-auto">
+
+      <!-- Section Title Centered -->
+      <div data-reveal="up" class="max-w-3xl mx-auto text-center mb-12">
+        <div class="badge-eyebrow-dark mb-3">
+          <span>✦</span>
+          <span>Catering Menus</span>
+        </div>
+        <h2 class="font-serif text-3xl sm:text-5xl lg:text-6xl text-charcoal font-normal uppercase tracking-tight">
+          Most Popular Dishes
+        </h2>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div data-reveal="up" class="delay-100 flex flex-wrap justify-center items-center gap-3 mb-14">
+        <button
+          class="menu-filter-tab px-6 py-2 rounded-full text-xs font-semibold uppercase tracking-wider transition-all border border-amber-600 bg-amber-600 text-white shadow-sm"
+          data-filter="all">
+          All Menus
+        </button>
+        <button
+          class="menu-filter-tab px-6 py-2 rounded-full text-xs font-semibold uppercase tracking-wider transition-all border border-stone-300 bg-transparent text-stone-800 hover:border-amber-600"
+          data-filter="wedding">
+          Royal Wedding
+        </button>
+        <button
+          class="menu-filter-tab px-6 py-2 rounded-full text-xs font-semibold uppercase tracking-wider transition-all border border-stone-300 bg-transparent text-stone-800 hover:border-amber-600"
+          data-filter="modern">
+          Modern Dinner
+        </button>
+        <button
+          class="menu-filter-tab px-6 py-2 rounded-full text-xs font-semibold uppercase tracking-wider transition-all border border-stone-300 bg-transparent text-stone-800 hover:border-amber-600"
+          data-filter="corporate">
+          Corporate Gala
+        </button>
+        <button
+          class="menu-filter-tab px-6 py-2 rounded-full text-xs font-semibold uppercase tracking-wider transition-all border border-stone-300 bg-transparent text-stone-800 hover:border-amber-600"
+          data-filter="social">
+          Live Counters
+        </button>
+      </div>
+
+      <!-- 4-Card Dish Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+        <!-- Card 1: Catering Wedding -->
+        <div data-reveal="up"
+          class="menu-dish-card luxury-card bg-cream-card rounded-3xl p-5 border border-charcoal/10 shadow-sm flex flex-col justify-between group"
+          data-category="wedding">
+          <div>
+            <div class="relative overflow-hidden rounded-2xl aspect-[4/3] mb-5 img-zoom-container">
+              <img src="assets/images/web/menu_royal_platter.jpg" alt="Shahi Royal Platter"
+                class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700" loading="lazy" decoding="async" />
+              <span
+                class="absolute top-3 left-3 bg-espresso/90 text-gold text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full shadow-md">
+                Royal Wedding
+              </span>
+            </div>
+            <h3 class="font-serif text-2xl uppercase text-charcoal font-semibold tracking-wide text-center mb-2">
+              CATERING WEDDING
+            </h3>
+            <p class="text-xs text-charcoal-muted text-center leading-relaxed mb-4">
+              Crafted royal curries, artisanal breads, saffron pairings, and traditional desserts.
+            </p>
+          </div>
+          <button
+            class="view-dish-trigger w-full py-2.5 rounded-full border border-charcoal/20 hover:border-gold hover:bg-gold hover:text-espresso text-xs font-semibold uppercase tracking-wider transition-all"
+            data-dish-key="wedding">
+            View Menu Details ➔
+          </button>
+        </div>
+
+        <!-- Card 2: Modern Dinner -->
+        <div data-reveal="up"
+          class="delay-100 menu-dish-card luxury-card bg-cream-card rounded-3xl p-5 border border-charcoal/10 shadow-sm flex flex-col justify-between group"
+          data-category="modern">
+          <div>
+            <div class="relative overflow-hidden rounded-2xl aspect-[4/3] mb-5 img-zoom-container">
+              <img src="assets/images/web/menu_parmesan_pasta.jpg" alt="Live Parmesan Wheel Pasta Station"
+                class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700" loading="lazy" decoding="async" />
+              <span
+                class="absolute top-3 left-3 bg-espresso/90 text-gold text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full shadow-md">
+                Contemporary
+              </span>
+            </div>
+            <h3 class="font-serif text-2xl uppercase text-charcoal font-semibold tracking-wide text-center mb-2">
+              MODERN DINNER
+            </h3>
+            <p class="text-xs text-charcoal-muted text-center leading-relaxed mb-4">
+              European truffle delicacies, roasted harvests, and sweet finishes both bold and nostalgic.
+            </p>
+          </div>
+          <button
+            class="view-dish-trigger w-full py-2.5 rounded-full border border-charcoal/20 hover:border-gold hover:bg-gold hover:text-espresso text-xs font-semibold uppercase tracking-wider transition-all"
+            data-dish-key="modern">
+            View Menu Details ➔
+          </button>
+        </div>
+
+        <!-- Card 3: Corporate Menu -->
+        <div data-reveal="up"
+          class="delay-200 menu-dish-card luxury-card bg-cream-card rounded-3xl p-5 border border-charcoal/10 shadow-sm flex flex-col justify-between group"
+          data-category="corporate">
+          <div>
+            <div class="relative overflow-hidden rounded-2xl aspect-[4/3] mb-5 img-zoom-container">
+              <img src="assets/images/web/menu_volcano_chaat.jpg" alt="Theatrical Volcano Chaat Station"
+                class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700" loading="lazy" decoding="async" />
+              <span
+                class="absolute top-3 left-3 bg-espresso/90 text-gold text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full shadow-md">
+                Corporate
+              </span>
+            </div>
+            <h3 class="font-serif text-2xl uppercase text-charcoal font-semibold tracking-wide text-center mb-2">
+              CORPORATE MENU
+            </h3>
+            <p class="text-xs text-charcoal-muted text-center leading-relaxed mb-4">
+              Executive mezze platters, artisanal hors d’oeuvres, and bespoke botanical beverage pairings.
+            </p>
+          </div>
+          <button
+            class="view-dish-trigger w-full py-2.5 rounded-full border border-charcoal/20 hover:border-gold hover:bg-gold hover:text-espresso text-xs font-semibold uppercase tracking-wider transition-all"
+            data-dish-key="corporate">
+            View Menu Details ➔
+          </button>
+        </div>
+
+        <!-- Card 4: Social Events -->
+        <div data-reveal="up"
+          class="delay-300 menu-dish-card luxury-card bg-cream-card rounded-3xl p-5 border border-charcoal/10 shadow-sm flex flex-col justify-between group"
+          data-category="social">
+          <div>
+            <div class="relative overflow-hidden rounded-2xl aspect-[4/3] mb-5 img-zoom-container">
+              <img src="assets/images/web/menu_rasmalai_dessert.jpg" alt="Lakhnavi Rasmalai with Paan"
+                class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700" loading="lazy" decoding="async" />
+              <span
+                class="absolute top-3 left-3 bg-espresso/90 text-gold text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full shadow-md">
+                Live Counters
+              </span>
+            </div>
+            <h3 class="font-serif text-2xl uppercase text-charcoal font-semibold tracking-wide text-center mb-2">
+              SOCIAL EVENTS
+            </h3>
+            <p class="text-xs text-charcoal-muted text-center leading-relaxed mb-4">
+              Interactive live street-food stations, handcrafted dim sums, sliders, and dessert fountains.
+            </p>
+          </div>
+          <button
+            class="view-dish-trigger w-full py-2.5 rounded-full border border-charcoal/20 hover:border-gold hover:bg-gold hover:text-espresso text-xs font-semibold uppercase tracking-wider transition-all"
+            data-dish-key="social">
+            View Menu Details ➔
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Bottom Subtext & Explore Menu CTA Button -->
+      <div data-reveal="up" class="delay-200 max-w-2xl mx-auto text-center mt-16 flex flex-col items-center">
+        <p class="text-sm text-charcoal-muted leading-relaxed mb-6 font-light">
+          Our menu is a celebration of both royal tradition and modern innovation, crafted to evoke the comforting
+          flavors of home while offering a gourmet twist for luxury events.
+        </p>
+        <a href="#contact" class="btn-pill-dark text-xs tracking-wider uppercase">
+          <span>Explore Full Custom Menu</span>
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+          </svg>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =========================================================================
+       7. CINEMATIC VIDEO SHOWCASE BANNER
+       ========================================================================= -->
+  <section class="relative bg-espresso py-32 lg:py-44 px-6 overflow-hidden flex items-center justify-center">
+    <div class="absolute inset-0 z-0 opacity-30 bg-cover bg-center"
+      style="background-image: url('assets/images/web/video_bg.jpg');"></div>
+    <div class="absolute inset-0 z-0 bg-espresso/80"></div>
+
+    <!-- Giant Watermark Text -->
+    <div
+      class="absolute inset-x-0 top-1/2 -translate-y-1/2 z-0 flex justify-center items-center pointer-events-none opacity-15">
+      <span class="watermark-text text-[100px] sm:text-[180px] lg:text-[220px] uppercase font-bold tracking-widest">
+        PATEL VIDEO
+      </span>
+    </div>
+
+    <!-- Center Play Button & Typography -->
+    <div data-reveal="zoom" class="relative z-10 max-w-3xl mx-auto text-center flex flex-col items-center">
+      <!-- Pulsing Gold Play Button -->
+      <button id="play-video-btn"
+        class="w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-gold text-espresso flex items-center justify-center mb-8 pulse-gold-glow hover:scale-110 transition-transform shadow-2xl group cursor-pointer"
+        aria-label="Play Video Presentation">
+        <svg class="w-8 h-8 fill-current ml-1 group-hover:scale-110 transition-transform" viewBox="0 0 24 24">
+          <path d="M8 5v14l11-7z" />
+        </svg>
+      </button>
+
+      <span class="text-xs uppercase tracking-[0.25em] text-gold font-semibold mb-3">
+        ✦ EXPERIENCE THE ARTISTRY ✦
+      </span>
+      <h2
+        class="font-serif text-3xl sm:text-5xl lg:text-6xl text-white font-normal uppercase tracking-tight leading-tight mb-4">
+        Where Flavor Becomes An Unforgettable Memory
+      </h2>
+      <p class="text-white/70 text-sm max-w-lg mx-auto font-light leading-relaxed">
+        Step behind the scenes with Patel Caterers to witness the meticulous preparation, master plating, and heartfelt
+        hospitality that define every celebration.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- =========================================================================
+       8. HOW WE WORK (Work Process 01, 02, 03, 04)
+       ========================================================================= -->
+  <section id="process" class="relative bg-cream py-24 lg:py-32 px-6 lg:px-16 overflow-hidden">
+    <!-- Watermark behind -->
+    <div class="absolute top-10 inset-x-0 flex justify-center pointer-events-none opacity-20">
+      <span class="watermark-text-dark text-[100px] sm:text-[160px] uppercase font-bold">
+        EVENT WORKFLOW
+      </span>
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div data-reveal="up" class="max-w-3xl mx-auto text-center mb-16">
+        <div class="badge-eyebrow-dark mb-3">
+          <span>✦</span>
+          <span>How We Work</span>
+        </div>
+        <h2 class="font-serif text-3xl sm:text-5xl lg:text-6xl text-charcoal font-normal uppercase tracking-tight">
+          Our Seamless 4-Step Process
+        </h2>
+      </div>
+
+      <!-- 4-Steps Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+        <!-- Step 01 -->
+        <div data-reveal="up"
+          class="luxury-card bg-cream-card rounded-3xl p-6 border border-charcoal/10 shadow-sm relative group hover:shadow-xl transition-all">
+          <div class="relative overflow-hidden rounded-2xl aspect-[4/3] mb-6 img-zoom-container">
+            <img src="assets/images/web/process_planning.jpg" alt="Consultation & Tablescape Planning"
+              class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700" loading="lazy" decoding="async" />
+            <div class="absolute inset-0 bg-charcoal/20"></div>
+            <span class="font-serif text-5xl font-bold text-white/90 absolute bottom-2 left-4">01</span>
+          </div>
+          <h3 class="font-serif text-xl font-bold uppercase text-charcoal mb-2">
+            TELL US ABOUT YOUR EVENT
+          </h3>
+          <p class="text-xs text-charcoal-muted leading-relaxed">
+            We begin with a personalized discovery session to understand your dream theme, guest count, and culinary
+            preferences.
+          </p>
+        </div>
+
+        <!-- Step 02 -->
+        <div data-reveal="up"
+          class="delay-100 luxury-card bg-cream-card rounded-3xl p-6 border border-charcoal/10 shadow-sm relative group hover:shadow-xl transition-all">
+          <div class="relative overflow-hidden rounded-2xl aspect-[4/3] mb-6 img-zoom-container">
+            <img src="assets/images/web/process_curation.jpg" alt="Menu Curation & Artisanal Plating"
+              class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700" loading="lazy" decoding="async" />
+            <div class="absolute inset-0 bg-charcoal/20"></div>
+            <span class="font-serif text-5xl font-bold text-white/90 absolute bottom-2 left-4">02</span>
+          </div>
+          <h3 class="font-serif text-xl font-bold uppercase text-charcoal mb-2">
+            CHEF'S TASTING SESSION
+          </h3>
+          <p class="text-xs text-charcoal-muted leading-relaxed">
+            Sample signature creations prepared by our master culinary team and refine your bespoke multi-course menu.
+          </p>
+        </div>
+
+        <!-- Step 03 -->
+        <div data-reveal="up"
+          class="delay-200 luxury-card bg-cream-card rounded-3xl p-6 border border-charcoal/10 shadow-sm relative group hover:shadow-xl transition-all">
+          <div class="relative overflow-hidden rounded-2xl aspect-[4/3] mb-6 img-zoom-container">
+            <img src="assets/images/web/process_live.jpg" alt="Live Kitchen & Counter Architecture"
+              class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700" loading="lazy" decoding="async" />
+            <div class="absolute inset-0 bg-charcoal/20"></div>
+            <span class="font-serif text-5xl font-bold text-white/90 absolute bottom-2 left-4">03</span>
+          </div>
+          <h3 class="font-serif text-xl font-bold uppercase text-charcoal mb-2">
+            VENUE & KITCHEN SETUP
+          </h3>
+          <p class="text-xs text-charcoal-muted leading-relaxed">
+            Our logistics team coordinates hygiene audits, live counter architecture, and table styling with your venue
+            team.
+          </p>
+        </div>
+
+        <!-- Step 04 -->
+        <div data-reveal="up"
+          class="delay-300 luxury-card bg-cream-card rounded-3xl p-6 border border-charcoal/10 shadow-sm relative group hover:shadow-xl transition-all">
+          <div class="relative overflow-hidden rounded-2xl aspect-[4/3] mb-6 img-zoom-container">
+            <img src="assets/images/web/process_service.jpg" alt="Flawless White-Glove Banquet Service"
+              class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700" loading="lazy" decoding="async" />
+            <div class="absolute inset-0 bg-charcoal/20"></div>
+            <span class="font-serif text-5xl font-bold text-white/90 absolute bottom-2 left-4">04</span>
+          </div>
+          <h3 class="font-serif text-xl font-bold uppercase text-charcoal mb-2">
+            FLAWLESS EVENT EXECUTION
+          </h3>
+          <p class="text-xs text-charcoal-muted leading-relaxed">
+            On the event day, our white-glove staff and executive banquet chefs ensure piping hot, breathtaking service
+            for your guests.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       9B. ROYAL BANQUET & CELEBRATIONS GALLERY (Real Patel Caterers Events)
+       ========================================================================= -->
+  <section id="gallery"
+    class="relative bg-espresso-deep py-24 lg:py-32 px-6 lg:px-16 overflow-hidden border-t border-white/10">
+    <!-- Giant Watermark Typography -->
+    <div
+      class="absolute inset-x-0 top-1/2 -translate-y-1/2 z-0 flex justify-center items-center pointer-events-none opacity-10 whitespace-nowrap">
+      <span class="watermark-text text-[90px] sm:text-[150px] lg:text-[200px] uppercase font-bold tracking-widest">
+        BANQUET GALLERY
+      </span>
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div data-reveal="up" class="max-w-3xl mx-auto text-center mb-16">
+        <div class="badge-eyebrow mb-3">
+          <span>✦</span>
+          <span>Grand Event Portfolio</span>
+        </div>
+        <h2 class="font-serif text-3xl sm:text-5xl lg:text-6xl text-white font-normal uppercase tracking-tight mb-4">
+          Celebrations In Royal Splendor
+        </h2>
+        <p class="text-white/70 text-sm max-w-xl mx-auto font-light leading-relaxed">
+          Glimpses of real destination weddings, illuminated night banquets, live theatrical carriage counters, and
+          majestic dining experiences curated by Patel Caterers.
+        </p>
+      </div>
+
+      <!-- 6-Photo Masonry/Grid Showcase -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- Gallery Item 1 -->
+        <div data-reveal="up"
+          class="relative rounded-3xl overflow-hidden group aspect-[4/3] border border-white/10 shadow-xl img-zoom-container">
+          <img src="assets/images/web/gallery_1.jpg" alt="Royal Wedding Palatial Arches & Lawn Dining"
+            class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700" loading="lazy" decoding="async" />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+            <span class="text-xs uppercase tracking-widest text-gold font-semibold">Destination Wedding</span>
+            <p class="font-serif text-lg text-white font-medium">Palatial Lawn Dining Under Dusk Sky</p>
+          </div>
+        </div>
+
+        <!-- Gallery Item 2 -->
+        <div data-reveal="up"
+          class="delay-100 relative rounded-3xl overflow-hidden group aspect-[4/3] border border-white/10 shadow-xl img-zoom-container">
+          <img src="assets/images/web/gallery_2.jpg" alt="Royal Carriage Wheeled Live Buffet Counters"
+            class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700" loading="lazy" decoding="async" />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+            <span class="text-xs uppercase tracking-widest text-gold font-semibold">Theatrical Architecture</span>
+            <p class="font-serif text-lg text-white font-medium">Carriage Live Counters & Chefs</p>
+          </div>
+        </div>
+
+        <!-- Gallery Item 3 -->
+        <div data-reveal="up"
+          class="delay-200 relative rounded-3xl overflow-hidden group aspect-[4/3] border border-white/10 shadow-xl img-zoom-container">
+          <img src="assets/images/web/gallery_3.jpg" alt="Illuminated Banquet Island Setup"
+            class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700" loading="lazy" decoding="async" />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+            <span class="text-xs uppercase tracking-widest text-gold font-semibold">Festive Galas</span>
+            <p class="font-serif text-lg text-white font-medium">Gourmet Island Centerpiece Banquet</p>
+          </div>
+        </div>
+
+        <!-- Gallery Item 4 -->
+        <div data-reveal="up"
+          class="relative rounded-3xl overflow-hidden group aspect-[4/3] border border-white/10 shadow-xl img-zoom-container">
+          <img src="assets/images/web/gallery_4.jpg" alt="Fairy-Lit Sweeping Lawn Buffet Curve"
+            class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700" loading="lazy" decoding="async" />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+            <span class="text-xs uppercase tracking-widest text-gold font-semibold">Evening Ambiance</span>
+            <p class="font-serif text-lg text-white font-medium">Luminous Garden Buffet Promenade</p>
+          </div>
+        </div>
+
+        <!-- Gallery Item 5 -->
+        <div data-reveal="up"
+          class="delay-100 relative rounded-3xl overflow-hidden group aspect-[4/3] border border-white/10 shadow-xl img-zoom-container">
+          <img src="assets/images/web/gallery_5.jpg" alt="Night Banquet Culinary Stalls"
+            class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700" loading="lazy" decoding="async" />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+            <span class="text-xs uppercase tracking-widest text-gold font-semibold">Royal Occasions</span>
+            <p class="font-serif text-lg text-white font-medium">Illuminated Luxury Food Stalls</p>
+          </div>
+        </div>
+
+        <!-- Gallery Item 6 -->
+        <div data-reveal="up"
+          class="delay-200 relative rounded-3xl overflow-hidden group aspect-[4/3] border border-white/10 shadow-xl img-zoom-container">
+          <img src="assets/images/web/gallery_6.jpg" alt="Live Dessert & Fusion Installations"
+            class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700" loading="lazy" decoding="async" />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+            <span class="text-xs uppercase tracking-widest text-gold font-semibold">Artisanal Stations</span>
+            <p class="font-serif text-lg text-white font-medium">Live Dessert & Fusion Displays</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       10. CLIENT TESTIMONIALS & REVIEWS SLIDER
+       ========================================================================= -->
+  <section id="reviews" class="relative bg-cream py-24 lg:py-32 px-6 lg:px-16 overflow-hidden">
+    <div class="max-w-4xl mx-auto text-center">
+      <div data-reveal="up" class="badge-eyebrow-dark mb-3">
+        <span>✦</span>
+        <span>Testimonials & Praise</span>
+      </div>
+      <h2 data-reveal="up"
+        class="font-serif text-3xl sm:text-5xl text-charcoal font-normal uppercase tracking-tight mb-12">
+        Memories Shared By Our Cherished Hosts
+      </h2>
+
+      <!-- Testimonial Slider Wrapper -->
+      <div data-reveal="zoom"
+        class="relative bg-cream-card rounded-3xl p-8 sm:p-14 border border-charcoal/10 shadow-lg luxury-card">
+        <!-- Big Quote Icon -->
+        <div class="text-gold font-serif text-7xl leading-none mb-4 opacity-50">“</div>
+
+        <!-- Slide 1 -->
+        <div class="testimonial-slide block transition-opacity duration-300">
+          <div class="flex justify-center text-amber-500 text-lg mb-4">
+            ★★★★★
+          </div>
+          <p class="font-serif text-lg sm:text-2xl text-charcoal italic leading-relaxed mb-6 font-normal">
+            “Patel Caterers made our daughter’s destination wedding in Udaipur unforgettable. From the live chaat
+            counter to the 7-course royal sit-down banquet, our 1,200 international guests couldn't stop praising the
+            flavors!”
+          </p>
+          <div class="flex flex-col items-center">
+            <span class="font-serif text-lg font-bold uppercase tracking-wider text-charcoal">Harshvardhan & Neha
+              Singhania</span>
+            <span class="text-xs uppercase tracking-widest text-gold font-semibold">Grand Palace Wedding, Udaipur</span>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="testimonial-slide hidden opacity-0 transition-opacity duration-300">
+          <div class="flex justify-center text-amber-500 text-lg mb-4">
+            ★★★★★
+          </div>
+          <p class="font-serif text-lg sm:text-2xl text-charcoal italic leading-relaxed mb-6 font-normal">
+            “For our Global Tech Summit annual dinner with 600 delegates, the presentation, culinary variety, and
+            seamless white-glove timing were world class. Patel Caterers is our permanent catering partner!”
+          </p>
+          <div class="flex flex-col items-center">
+            <span class="font-serif text-lg font-bold uppercase tracking-wider text-charcoal">Rohan Mehta</span>
+            <span class="text-xs uppercase tracking-widest text-gold font-semibold">VP Operations, Nexus Global</span>
+          </div>
+        </div>
+
+        <!-- Prev / Next Controls -->
+        <div class="flex justify-center items-center gap-4 mt-8">
+          <button id="test-prev"
+            class="w-10 h-10 rounded-full border border-charcoal/20 hover:border-gold hover:bg-gold hover:text-espresso flex items-center justify-center transition-all cursor-pointer"
+            aria-label="Previous Review">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+          <button id="test-next"
+            class="w-10 h-10 rounded-full border border-charcoal/20 hover:border-gold hover:bg-gold hover:text-espresso flex items-center justify-center transition-all cursor-pointer"
+            aria-label="Next Review">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =========================================================================
+       11. EVENT RESERVATION & INSTANT QUOTE FORM
+       ========================================================================= -->
+  <section id="contact"
+    class="relative bg-cream-light py-24 lg:py-32 px-6 lg:px-16 overflow-hidden border-t border-charcoal/5">
+    <div class="max-w-4xl mx-auto">
+      <div data-reveal="up" class="text-center mb-10">
+        <div class="badge-eyebrow-dark mb-3">
+          <span>✦</span>
+          <span>Book Your Date</span>
+        </div>
+        <h2 class="font-serif text-3xl sm:text-5xl lg:text-6xl text-charcoal font-normal uppercase tracking-tight">
+          Start Planning Your Event Today!
+        </h2>
+        <p class="text-charcoal-muted text-xs sm:text-sm mt-3 max-w-lg mx-auto">
+          Share your celebration vision with our culinary planners, visit our kitchen office, or call us directly.
+        </p>
+      </div>
+
+      <!-- Quick Contact Info Cards -->
+      <div data-reveal="up" class="grid grid-cols-1 md:grid-cols-3 gap-5 mb-10">
+        <!-- Address Card -->
+        <a href="https://maps.google.com/?q=19+near+laxmi+narayan+mandir,+suruchi+park,+manjalpur,+vadodara,+gujarat+390011"
+          target="_blank" rel="noopener noreferrer"
+          class="bg-cream-card rounded-2xl p-6 border border-charcoal/10 shadow-sm hover:shadow-md hover:border-gold/50 transition-all group flex flex-col items-center text-center">
+          <div
+            class="w-12 h-12 rounded-full bg-gold/15 text-gold flex items-center justify-center mb-3 group-hover:bg-gold group-hover:text-white transition-colors">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+          </div>
+          <span class="text-[11px] uppercase tracking-wider font-bold text-charcoal/60 mb-1">Our Address</span>
+          <p class="text-xs text-charcoal font-medium leading-relaxed group-hover:text-espresso transition-colors">
+            19 Near Laxmi Narayan Mandir, Suruchi Park, Manjalpur, Vadodara, Gujarat 390011
+          </p>
+          <span class="text-[10px] text-gold font-semibold mt-2 inline-flex items-center gap-1">
+            Open in Google Maps ➔
+          </span>
+        </a>
+
+        <!-- Phone Card -->
+        <a href="tel:+919979040333"
+          class="bg-cream-card rounded-2xl p-6 border border-charcoal/10 shadow-sm hover:shadow-md hover:border-gold/50 transition-all group flex flex-col items-center text-center">
+          <div
+            class="w-12 h-12 rounded-full bg-gold/15 text-gold flex items-center justify-center mb-3 group-hover:bg-gold group-hover:text-white transition-colors">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+          </div>
+          <span class="text-[11px] uppercase tracking-wider font-bold text-charcoal/60 mb-1">Call / WhatsApp</span>
+          <p class="text-base font-serif font-bold text-charcoal group-hover:text-gold transition-colors">
+            +91 99790 40333
+          </p>
+          <span class="text-[10px] text-charcoal-muted mt-1">09979040333 • 9 AM - 10 PM</span>
+        </a>
+
+        <!-- Email Card -->
+        <a href="mailto:patelcaterers92@gmail.com"
+          class="bg-cream-card rounded-2xl p-6 border border-charcoal/10 shadow-sm hover:shadow-md hover:border-gold/50 transition-all group flex flex-col items-center text-center">
+          <div
+            class="w-12 h-12 rounded-full bg-gold/15 text-gold flex items-center justify-center mb-3 group-hover:bg-gold group-hover:text-white transition-colors">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <span class="text-[11px] uppercase tracking-wider font-bold text-charcoal/60 mb-1">Email Inquiries</span>
+          <p class="text-xs font-semibold text-charcoal group-hover:text-gold transition-colors break-all">
+            patelcaterers92@gmail.com
+          </p>
+          <span class="text-[10px] text-charcoal-muted mt-1">Prompt Response Within 24h</span>
+        </a>
+      </div>
+
+      <!-- Reservation Form Card -->
+      <form id="catering-quote-form" data-reveal="zoom"
+        class="bg-cream-card rounded-3xl p-8 sm:p-12 border border-charcoal/10 shadow-lg space-y-6 luxury-card">
+        <!-- Name -->
+        <div>
+          <label class="block text-xs font-semibold uppercase tracking-wider text-charcoal mb-2">Your Full Name
+            *</label>
+          <input type="text" required placeholder="e.g. Aniket Patel"
+            class="w-full bg-white/70 border border-charcoal/20 rounded-2xl px-5 py-3.5 text-sm text-charcoal placeholder-charcoal/40 focus:outline-none focus:border-gold focus:ring-2 focus:ring-gold/20 transition-all" />
+        </div>
+
+        <!-- Phone & Email -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div>
+            <label class="block text-xs font-semibold uppercase tracking-wider text-charcoal mb-2">Phone Number
+              *</label>
+            <input type="tel" required placeholder="+91 99790 40333"
+              class="w-full bg-white/70 border border-charcoal/20 rounded-2xl px-5 py-3.5 text-sm text-charcoal placeholder-charcoal/40 focus:outline-none focus:border-gold focus:ring-2 focus:ring-gold/20 transition-all" />
+          </div>
+          <div>
+            <label class="block text-xs font-semibold uppercase tracking-wider text-charcoal mb-2">Email Address
+              *</label>
+            <input type="email" required placeholder="name@domain.com"
+              class="w-full bg-white/70 border border-charcoal/20 rounded-2xl px-5 py-3.5 text-sm text-charcoal placeholder-charcoal/40 focus:outline-none focus:border-gold focus:ring-2 focus:ring-gold/20 transition-all" />
+          </div>
+        </div>
+
+        <!-- Company & Event Type -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div>
+            <label class="block text-xs font-semibold uppercase tracking-wider text-charcoal mb-2">Company / Family
+              Name</label>
+            <input type="text" placeholder="e.g. Patel Family"
+              class="w-full bg-white/70 border border-charcoal/20 rounded-2xl px-5 py-3.5 text-sm text-charcoal placeholder-charcoal/40 focus:outline-none focus:border-gold focus:ring-2 focus:ring-gold/20 transition-all" />
+          </div>
+          <div>
+            <label class="block text-xs font-semibold uppercase tracking-wider text-charcoal mb-2">Event Type *</label>
+            <select required
+              class="w-full bg-white/70 border border-charcoal/20 rounded-2xl px-5 py-3.5 text-sm text-charcoal focus:outline-none focus:border-gold focus:ring-2 focus:ring-gold/20 transition-all">
+              <option value="" disabled selected>Select Event Type</option>
+              <option value="wedding">Royal Wedding Banquet</option>
+              <option value="reception">Wedding Reception</option>
+              <option value="sangeet">Sangeet & Cocktail Evening</option>
+              <option value="corporate">Corporate Gala / Conference</option>
+              <option value="social">Milestone Celebration / Birthday</option>
+              <option value="other">Bespoke Gathering</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Date & Number of Guests -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div>
+            <label class="block text-xs font-semibold uppercase tracking-wider text-charcoal mb-2">Event Date
+              (dd/mm/yyyy) *</label>
+            <input type="date" required
+              class="w-full bg-white/70 border border-charcoal/20 rounded-2xl px-5 py-3.5 text-sm text-charcoal focus:outline-none focus:border-gold focus:ring-2 focus:ring-gold/20 transition-all" />
+          </div>
+          <div>
+            <label class="block text-xs font-semibold uppercase tracking-wider text-charcoal mb-2">Estimated Number of
+              Guests *</label>
+            <input type="number" min="50" max="20000" placeholder="e.g. 500" required
+              class="w-full bg-white/70 border border-charcoal/20 rounded-2xl px-5 py-3.5 text-sm text-charcoal placeholder-charcoal/40 focus:outline-none focus:border-gold focus:ring-2 focus:ring-gold/20 transition-all" />
+          </div>
+        </div>
+
+        <!-- Wishes / Special Requests -->
+        <div>
+          <label class="block text-xs font-semibold uppercase tracking-wider text-charcoal mb-2">Wishes / Dietary
+            Preferences / Special Notes</label>
+          <textarea rows="4"
+            placeholder="Tell us about your preferred cuisines, live counter ideas, or special dietary requirements (Jain, Vegan, Gluten-Free)..."
+            class="w-full bg-white/70 border border-charcoal/20 rounded-2xl px-5 py-3.5 text-sm text-charcoal placeholder-charcoal/40 focus:outline-none focus:border-gold focus:ring-2 focus:ring-gold/20 transition-all"></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="pt-2">
+          <button type="submit" class="btn-pill-dark w-full sm:w-auto text-xs tracking-wider uppercase">
+            <span>Submit Request</span>
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+
+  <!-- =========================================================================
+       12. NEWS & CULINARY JOURNAL (Blog Section)
+       ========================================================================= -->
+  <section class="relative bg-cream py-24 lg:py-32 px-6 lg:px-16 overflow-hidden">
+    <div class="max-w-7xl mx-auto">
+      <div data-reveal="up" class="max-w-3xl mx-auto text-center mb-16">
+        <div class="badge-eyebrow-dark mb-3">
+          <span>✦</span>
+          <span>News & Blog</span>
+        </div>
+        <h2 class="font-serif text-3xl sm:text-5xl lg:text-6xl text-charcoal font-normal uppercase tracking-tight">
+          Discover The Art Of Catering
+        </h2>
+      </div>
+
+      <!-- 3 Blog Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+        <!-- Blog 1 -->
+        <div data-reveal="up"
+          class="luxury-card bg-cream-card rounded-3xl p-5 border border-charcoal/10 shadow-sm group hover:shadow-xl transition-all flex flex-col justify-between">
+          <div>
+            <div class="relative overflow-hidden rounded-2xl aspect-[4/3] mb-5 img-zoom-container">
+              <img src="assets/images/web/story_1.jpg" alt="Planning Process"
+                class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700" loading="lazy" decoding="async" />
+            </div>
+            <div class="flex items-center gap-3 text-[11px] font-semibold uppercase tracking-wider text-gold mb-2">
+              <span>April 14, 2026</span>
+              <span>•</span>
+              <span>10 Comments</span>
+            </div>
+            <h3
+              class="font-serif text-xl uppercase font-bold text-charcoal leading-snug mb-3 group-hover:text-amber-700 transition-colors">
+              CATERING & EVENT PLANNING PROCESS: FROM IDEA TO EXECUTION
+            </h3>
+          </div>
+          <a href="#contact"
+            class="inline-flex items-center gap-2 text-xs uppercase font-bold tracking-wider text-charcoal hover:text-gold transition-colors pt-2">
+            <span>Read More</span>
+            <span>➔</span>
+          </a>
+        </div>
+
+        <!-- Blog 2 -->
+        <div data-reveal="up"
+          class="delay-100 luxury-card bg-cream-card rounded-3xl p-5 border border-charcoal/10 shadow-sm group hover:shadow-xl transition-all flex flex-col justify-between">
+          <div>
+            <div class="relative overflow-hidden rounded-2xl aspect-[4/3] mb-5 img-zoom-container">
+              <img src="assets/images/web/story_2.jpg" alt="Gujarati Fusion Catering Styles"
+                class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700" loading="lazy" decoding="async" />
+            </div>
+            <div class="flex items-center gap-3 text-[11px] font-semibold uppercase tracking-wider text-gold mb-2">
+              <span>April 10, 2026</span>
+              <span>•</span>
+              <span>8 Comments</span>
+            </div>
+            <h3
+              class="font-serif text-xl uppercase font-bold text-charcoal leading-snug mb-3 group-hover:text-amber-700 transition-colors">
+              HOW TO CHOOSE THE RIGHT CATERING STYLE FOR YOUR EVENT
+            </h3>
+          </div>
+          <a href="#contact"
+            class="inline-flex items-center gap-2 text-xs uppercase font-bold tracking-wider text-charcoal hover:text-gold transition-colors pt-2">
+            <span>Read More</span>
+            <span>➔</span>
+          </a>
+        </div>
+
+        <!-- Blog 3 -->
+        <div data-reveal="up"
+          class="delay-200 luxury-card bg-cream-card rounded-3xl p-5 border border-charcoal/10 shadow-sm group hover:shadow-xl transition-all flex flex-col justify-between">
+          <div>
+            <div class="relative overflow-hidden rounded-2xl aspect-[4/3] mb-5 img-zoom-container">
+              <img src="assets/images/web/story_3.jpg" alt="Professional Catering Teams"
+                class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700" loading="lazy" decoding="async" />
+            </div>
+            <div class="flex items-center gap-3 text-[11px] font-semibold uppercase tracking-wider text-gold mb-2">
+              <span>April 02, 2026</span>
+              <span>•</span>
+              <span>14 Comments</span>
+            </div>
+            <h3
+              class="font-serif text-xl uppercase font-bold text-charcoal leading-snug mb-3 group-hover:text-amber-700 transition-colors">
+              WHY PROFESSIONAL CATERING MATTERS MORE THAN EVER
+            </h3>
+          </div>
+          <a href="#contact"
+            class="inline-flex items-center gap-2 text-xs uppercase font-bold tracking-wider text-charcoal hover:text-gold transition-colors pt-2">
+            <span>Read More</span>
+            <span>➔</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =========================================================================
+       13. LUXURY ESPRESSO FOOTER (Identical to Anika Theme)
+       ========================================================================= -->
+  <footer class="bg-espresso text-white relative pt-20 pb-12 px-6 lg:px-16 border-t border-white/10">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 pb-16 border-b border-white/10">
+
+      <!-- Brand & Social Column (Left) -->
+      <div class="lg:col-span-5 flex flex-col space-y-6">
+        <a href="#hero" class="inline-flex items-center group" aria-label="Patel Caterers Home">
+          <img src="assets/images/logo.png" srcset="assets/images/logo.png 1x, assets/images/logo@2x.png 2x"
+            alt="Patel Caterers"
+            class="h-16 sm:h-20 lg:h-24 w-auto object-contain transition-transform duration-300 group-hover:scale-105 filter drop-shadow-lg" loading="lazy" decoding="async" />
+        </a>
+
+        <p class="text-xs text-white/70 max-w-sm font-light leading-relaxed">
+          Crafting unforgettable celebrations, royal Indian banquets, and modern contemporary feasts with culinary
+          passion and authentic heritage.
+        </p>
+
+        <!-- Social Icons (Facebook, Instagram, LinkedIn, YouTube) -->
+        <div class="flex items-center space-x-4 pt-2">
+          <a href="#"
+            class="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center text-white/80 hover:text-gold hover:border-gold transition-colors"
+            aria-label="Facebook">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+              <path
+                d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95C18.05 21.45 22 17.18 22 12z" />
+            </svg>
+          </a>
+          <a href="#"
+            class="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center text-white/80 hover:text-gold hover:border-gold transition-colors"
+            aria-label="Instagram">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+              <path
+                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+            </svg>
+          </a>
+          <a href="#"
+            class="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center text-white/80 hover:text-gold hover:border-gold transition-colors"
+            aria-label="LinkedIn">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+              <path
+                d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9h2.76v8.37H6.46v-8.37M7.84 6.2a1.62 1.62 0 1 0 1.63 1.62A1.63 1.63 0 0 0 7.84 6.2Z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Discover Navigation (Center) -->
+      <div class="lg:col-span-3">
+        <h4 class="font-serif text-lg uppercase tracking-wider text-gold mb-6 font-semibold">
+          DISCOVER
+        </h4>
+        <div class="grid grid-cols-2 gap-3 text-xs uppercase tracking-wider text-white/70">
+          <a href="#about" class="hover:text-gold transition-colors">About Us</a>
+          <a href="#services" class="hover:text-gold transition-colors">Corporate</a>
+          <a href="#menu" class="hover:text-gold transition-colors">Menus</a>
+          <a href="#services" class="hover:text-gold transition-colors">Wedding</a>
+          <a href="#process" class="hover:text-gold transition-colors">Process</a>
+          <a href="#services" class="hover:text-gold transition-colors">Social</a>
+          <a href="#chefs" class="hover:text-gold transition-colors">Chefs</a>
+          <a href="#reviews" class="hover:text-gold transition-colors">Reviews</a>
+          <a href="#contact" class="hover:text-gold transition-colors">Contact</a>
+          <a href="#contact" class="hover:text-gold transition-colors">Get Quote</a>
+        </div>
+      </div>
+
+      <!-- Contact Info (Right) -->
+      <div class="lg:col-span-4 space-y-4">
+        <h4 class="font-serif text-lg uppercase tracking-wider text-gold mb-6 font-semibold">
+          CONTACT
+        </h4>
+        <p class="text-xs text-white/70 leading-relaxed flex items-start gap-2.5">
+          <svg class="w-4 h-4 text-gold shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2"
+            viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+          </svg>
+          <a href="https://maps.google.com/?q=19+near+laxmi+narayan+mandir,+suruchi+park,+manjalpur,+vadodara,+gujarat+390011"
+            target="_blank" rel="noopener noreferrer" class="hover:text-gold transition-colors">
+            19 Near Laxmi Narayan Mandir, Suruchi Park, Manjalpur, Vadodara, Gujarat 390011
+          </a>
+        </p>
+        <p class="text-xs text-white/70 flex items-center gap-2.5">
+          <svg class="w-4 h-4 text-gold shrink-0" fill="none" stroke="currentColor" stroke-width="2"
+            viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+          <a href="mailto:patelcaterers92@gmail.com"
+            class="hover:text-gold transition-colors">patelcaterers92@gmail.com</a>
+        </p>
+        <p class="font-serif text-2xl text-gold font-bold pt-2 flex items-center gap-2">
+          <svg class="w-5 h-5 text-gold shrink-0" fill="none" stroke="currentColor" stroke-width="2"
+            viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+          <a href="tel:+919979040333" class="hover:underline">+91 99790 40333</a>
+        </p>
+        <p class="text-[11px] text-white/50 pl-7">
+          Direct / Mobile: 09979040333
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Bottom Copyright -->
+    <div class="max-w-7xl mx-auto pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-white/50">
+      <p>© Copyright 2026 Patel Caterers. All rights reserved.</p>
+      <p class="mt-2 sm:mt-0 font-serif italic text-gold">Crafted with Luxury & Taste</p>
+    </div>
+  </footer>
+
+
+  <!-- =========================================================================
+       14. FLOATING QUICK CONTACT & BACK-TO-TOP BUTTONS
+       ========================================================================= -->
+  <!-- Floating WhatsApp Quick Inquiry Button -->
+  <a href="https://wa.me/919979040333?text=Hello%20Patel%20Caterers,%20I%20would%20like%20to%20inquire%20about%20catering%20services"
+    target="_blank" rel="noopener noreferrer"
+    class="fixed bottom-5 left-4 sm:bottom-6 sm:left-6 z-40 flex items-center gap-2 bg-[#25D366] text-white p-3 sm:px-4 sm:py-3 rounded-full shadow-2xl hover:scale-105 hover:bg-[#20ba59] transition-all group"
+    aria-label="Chat on WhatsApp">
+    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+      <path
+        d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+    </svg>
+    <span class="text-xs font-semibold tracking-wide hidden sm:inline">WhatsApp Us</span>
+  </a>
+
+  <!-- Floating Back to Top Button -->
+  <button id="back-to-top"
+    class="fixed bottom-5 right-4 sm:bottom-6 sm:right-6 z-40 w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-white text-espresso border border-charcoal/20 shadow-2xl flex items-center justify-center opacity-0 pointer-events-none translate-y-4 transition-all duration-300 hover:bg-gold hover:text-white"
+    aria-label="Back to Top">
+    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+    </svg>
+  </button>
+
+
+  <!-- =========================================================================
+       15. INTERACTIVE DISH QUICK-VIEW MODAL
+       ========================================================================= -->
+  <div id="dish-quickview-modal"
+    class="modal-overlay fixed inset-0 z-50 bg-black/80 backdrop-blur-md flex items-center justify-center p-4 sm:p-6">
+    <div
+      class="modal-content bg-cream-card rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-gold/40 relative">
+      <button id="close-dish-modal"
+        class="absolute top-4 right-4 z-10 w-9 h-9 rounded-full bg-espresso text-gold flex items-center justify-center hover:bg-gold hover:text-espresso transition-all"
+        aria-label="Close Modal">
+        ✕
+      </button>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2">
+        <div class="relative h-60 sm:h-full">
+          <img id="dish-modal-image" src="" alt="Dish Platter" class="w-full h-full object-cover" loading="lazy" decoding="async" />
+        </div>
+        <div class="p-6 sm:p-8 flex flex-col justify-between">
+          <div>
+            <span class="text-[10px] uppercase tracking-widest text-gold font-bold">Chef's Signature Selection</span>
+            <h3 id="dish-modal-title" class="font-serif text-2xl uppercase font-bold text-charcoal my-2"></h3>
+            <p id="dish-modal-desc" class="text-xs text-charcoal-muted leading-relaxed mb-4"></p>
+
+            <div class="space-y-2 border-t border-charcoal/10 pt-3 text-xs">
+              <p><strong class="text-charcoal uppercase tracking-wider text-[10px]">Key Ingredients:</strong> <span
+                  id="dish-modal-ingredients" class="text-charcoal-muted"></span></p>
+              <p><strong class="text-charcoal uppercase tracking-wider text-[10px]">Dietary:</strong> <span
+                  id="dish-modal-dietary" class="text-gold font-semibold"></span></p>
+              <p><strong class="text-charcoal uppercase tracking-wider text-[10px]">Service:</strong> <span
+                  id="dish-modal-servings" class="text-charcoal-muted"></span></p>
+            </div>
+          </div>
+
+          <div class="pt-6">
+            <a href="#contact" onclick="document.getElementById('close-dish-modal').click();"
+              class="btn-pill-dark w-full text-center text-xs tracking-wider uppercase">
+              Request For Your Event ➔
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- =========================================================================
+       16. CINEMATIC VIDEO MODAL
+       ========================================================================= -->
+  <div id="video-modal"
+    class="modal-overlay fixed inset-0 z-50 bg-black/90 backdrop-blur-md flex items-center justify-center p-4">
+    <div
+      class="modal-content relative max-w-4xl w-full aspect-video bg-black rounded-3xl overflow-hidden shadow-2xl border border-gold/40">
+      <button id="close-video-modal"
+        class="absolute top-4 right-4 z-20 w-10 h-10 rounded-full bg-espresso text-gold flex items-center justify-center hover:bg-gold hover:text-espresso transition-all"
+        aria-label="Close Video">
+        ✕
+      </button>
+      <iframe id="video-modal-iframe" class="w-full h-full" src="about:blank"
+        data-src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?autoplay=1"
+        title="Patel Caterers Presentation" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+
+
+  <!-- =========================================================================
+       17. SUCCESS TOAST ALERT NOTIFICATION
+       ========================================================================= -->
+  <div id="toast-success"
+    class="fixed bottom-6 left-6 z-50 transform translate-y-20 opacity-0 transition-all duration-500 bg-charcoal text-white px-6 py-4 rounded-2xl shadow-2xl border border-gold/50 flex items-center gap-3">
+    <div class="w-8 h-8 rounded-full bg-gold text-espresso flex items-center justify-center font-bold">
+      ✓
+    </div>
+    <div>
+      <h5 class="text-xs font-bold uppercase tracking-wider text-gold">Request Submitted!</h5>
+      <p class="text-xs text-white/80">Thank you! Our event manager will contact you within 24 hours.</p>
+    </div>
+  </div>
+
+  <!-- Custom Javascript -->
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,524 @@
+/* ==========================================================================
+   Patel Caterers — Luxury In-Design Animations & Aesthetics
+   Inspired by Anika Catering & Event Theme
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --color-espresso: #231810;
+  --color-espresso-deep: #1b120b;
+  --color-cream: #efebe4;
+  --color-cream-light: #f7f4ee;
+  --color-cream-card: #f9f7f2;
+  --color-gold: #de9c52;
+  --color-gold-hover: #f1b36d;
+  --color-gold-glow: rgba(222, 156, 82, 0.4);
+  --color-charcoal: #3a2b20;
+  --color-taupe: #6e6259;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: var(--color-charcoal);
+  background-color: var(--color-cream);
+  overflow-x: hidden;
+  max-width: 100vw;
+  width: 100%;
+  /* GPU text rendering */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  overflow-x: hidden;
+  max-width: 100vw;
+  width: 100%;
+  position: relative;
+  /* Prevent paint flashing */
+  isolation: isolate;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background-color: var(--color-gold);
+  color: #ffffff;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 9px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-espresso);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-gold);
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gold-hover);
+}
+
+/* ==========================================================================
+   1. IN-DESIGN CONTINUOUS ANIMATIONS (Pure Visual & Cinematic)
+   ========================================================================== */
+
+/* Infinite Luxury Marquee / Ticker */
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marqueeScroll 28s linear infinite;
+  /* GPU-promote the marquee to its own compositing layer */
+  will-change: transform;
+  transform: translateZ(0);
+}
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marqueeScroll {
+  0% {
+    transform: translateX(0%) translateZ(0);
+  }
+  100% {
+    transform: translateX(-50%) translateZ(0);
+  }
+}
+
+/* Continuous Gold Text Shimmer */
+@keyframes goldTextShine {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gold-shimmer {
+  display: inline-block;
+  background: linear-gradient(120deg, #ffffff 10%, #fde68a 35%, #de9c52 50%, #fde68a 65%, #ffffff 90%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: goldTextShine 4s linear infinite;
+  text-shadow: none !important;
+  filter: drop-shadow(0 2px 14px rgba(0, 0, 0, 0.95)) drop-shadow(0 0 12px rgba(222, 156, 82, 0.45));
+  will-change: background-position;
+}
+
+/* Continuous Pulse for Video Play Button */
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(222, 156, 82, 0.4);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 45px rgba(222, 156, 82, 0.75);
+    transform: scale(1.05);
+  }
+}
+
+.pulse-gold-glow {
+  animation: pulseGlow 2.8s ease-in-out infinite;
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+/* Floating Culinary Garnishes (Basil & Tomato) Independent Drifts */
+@keyframes floatGarnishOne {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(8deg);
+  }
+}
+
+@keyframes floatGarnishTwo {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(-10deg);
+  }
+}
+
+.animate-garnish-1 {
+  animation: floatGarnishOne 5s ease-in-out infinite;
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+.animate-garnish-2 {
+  animation: floatGarnishTwo 6s ease-in-out infinite 0.7s;
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+/* Continuous Subtle Breathing Ring on Circular Avatars */
+@keyframes ringBreathe {
+  0%, 100% {
+    border-color: rgba(222, 156, 82, 0.4);
+    box-shadow: 0 0 15px rgba(222, 156, 82, 0.15);
+  }
+  50% {
+    border-color: rgba(222, 156, 82, 0.9);
+    box-shadow: 0 0 30px rgba(222, 156, 82, 0.4);
+  }
+}
+
+.animate-ring-breathe {
+  animation: ringBreathe 3.5s ease-in-out infinite;
+}
+
+
+/* ==========================================================================
+   2. SCROLL REVEAL ANIMATIONS (IntersectionObserver Based)
+   ========================================================================= */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(35px);
+  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+[data-reveal="left"] {
+  transform: translateX(-40px);
+}
+
+[data-reveal="right"] {
+  transform: translateX(40px);
+}
+
+[data-reveal="zoom"] {
+  transform: scale(0.94) translateY(20px);
+}
+
+[data-reveal].revealed {
+  opacity: 1;
+  transform: translate(0, 0) scale(1) !important;
+}
+
+/* On mobile & tablet screens, prevent horizontal overflow caused by translateX */
+@media (max-width: 768px) {
+  [data-reveal="left"],
+  [data-reveal="right"] {
+    transform: translateY(25px);
+  }
+  
+  .watermark-text,
+  .watermark-text-dark {
+    font-size: clamp(48px, 12vw, 90px) !important;
+    white-space: normal !important;
+    text-align: center;
+    line-height: 1 !important;
+    padding: 0 1rem;
+  }
+
+  .floating-accent {
+    display: none;
+  }
+}
+
+/* Staggered transition delays */
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+
+
+/* ==========================================================================
+   3. LUXURY BUTTONS & CARD SHINE EFFECTS
+   ========================================================================== */
+.btn-pill-gold {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--color-gold);
+  color: #1b120b;
+  font-weight: 600;
+  border-radius: 9999px;
+  padding: 0.85rem 2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  transition: all 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+  box-shadow: 0 4px 15px rgba(222, 156, 82, 0.25);
+}
+
+.btn-pill-gold::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.45), transparent);
+  transform: skewX(-20deg);
+  transition: left 0.75s ease;
+}
+
+.btn-pill-gold:hover {
+  background-color: #f1b36d;
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 10px 30px rgba(222, 156, 82, 0.45);
+}
+
+.btn-pill-gold:hover::before {
+  left: 150%;
+}
+
+.btn-pill-dark {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--color-charcoal);
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 9999px;
+  padding: 0.85rem 2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  transition: all 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+  box-shadow: 0 4px 15px rgba(35, 24, 16, 0.15);
+}
+
+.btn-pill-dark::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
+  transform: skewX(-20deg);
+  transition: left 0.75s ease;
+}
+
+.btn-pill-dark:hover {
+  background-color: var(--color-gold);
+  color: #1b120b;
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 10px 30px rgba(222, 156, 82, 0.35);
+}
+
+.btn-pill-dark:hover::before {
+  left: 150%;
+}
+
+/* Card Shine & Elevation on Hover */
+.luxury-card {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.luxury-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 80%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
+  transform: skewX(-25deg);
+  transition: left 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+}
+
+.luxury-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px -15px rgba(35, 24, 16, 0.15), 0 0 25px rgba(222, 156, 82, 0.15);
+  border-color: rgba(222, 156, 82, 0.4);
+}
+
+.luxury-card:hover::after {
+  left: 160%;
+}
+
+/* Image Zoom on hover */
+.img-zoom-container {
+  overflow: hidden;
+}
+.img-zoom-container img {
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.img-zoom-container:hover img {
+  transform: scale(1.08);
+}
+
+
+/* ==========================================================================
+   4. WATERMARKS, GLASSMORPHISM & MODALS
+   ========================================================================== */
+.watermark-text {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.12);
+  color: transparent;
+  user-select: none;
+  pointer-events: none;
+  line-height: 0.85;
+}
+
+.watermark-text-dark {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  -webkit-text-stroke: 1.5px rgba(58, 43, 32, 0.08);
+  color: transparent;
+  user-select: none;
+  pointer-events: none;
+  line-height: 0.85;
+}
+
+.glass-panel-dark {
+  background: rgba(35, 24, 16, 0.92);
+  /* Reduced blur: high blur values are expensive on mobile GPUs.
+     Use 10px instead of 18px — still looks glassy but costs far less. */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  /* Isolate the navbar from the hero video compositing layer to prevent
+     the video frame from being re-filtered and appearing blurry. */
+  isolation: isolate;
+  transform: translateZ(0);
+}
+
+.glass-panel-card {
+  background: rgba(130, 120, 110, 0.80);
+  /* Reduced blur for performance */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.badge-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--color-gold);
+}
+
+.badge-eyebrow-dark {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #8c6a46;
+}
+
+.dish-shadow {
+  filter: drop-shadow(0 25px 35px rgba(0, 0, 0, 0.55));
+}
+
+.modal-overlay {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.35s ease, visibility 0.35s ease;
+}
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+.modal-content {
+  transform: scale(0.92) translateY(30px);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.modal-overlay.active .modal-content {
+  transform: scale(1) translateY(0);
+}
+
+/* ==========================================================================
+   5. PERFORMANCE — Hero Video Isolation
+   The hero <video> must NEVER be inside a stacking context that has a
+   backdrop-filter applied above it, or the browser will re-rasterize the
+   video on every frame causing blur and jank.
+   ========================================================================== */
+#hero {
+  /* Create an explicit stacking context isolated from the navbar glass blur */
+  isolation: isolate;
+  /* Contain layout recalculations to this section only */
+  contain: layout style;
+}
+
+#hero-bg-video {
+  /* Direct full-bleed coverage — avoids fractional sub-pixel blur from translate(-50%, -50%) */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Native hardware-accelerated 16:9 coverage */
+  object-fit: cover;
+  object-position: center center;
+  border-radius: 0;
+  /* Crystal-Clear HD Grading: boosts banquet lighting, food colors and edge contrast */
+  filter: contrast(1.06) saturate(1.15) brightness(1.03);
+  -webkit-filter: contrast(1.06) saturate(1.15) brightness(1.03);
+  /* GPU layer promotion without coordinate jitter */
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  pointer-events: none;
+}
+
+.hero-video-tab {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.hero-video-tab:hover {
+  transform: translateY(-2px);
+}
+.hero-video-tab.active {
+  box-shadow: 0 0 22px rgba(222, 156, 82, 0.5), 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* ==========================================================================
+   6. REDUCE MOTION — Respect system accessibility setting
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track,
+  .animate-gold-shimmer,
+  .pulse-gold-glow,
+  .animate-garnish-1,
+  .animate-garnish-2,
+  .animate-ring-breathe {
+    animation: none !important;
+    will-change: auto;
+  }
+}
+
+/* ==========================================================================
+   7. MOBILE PERFORMANCE — Disable heavy animations on small screens
+   ========================================================================== */
+@media (max-width: 768px) {
+  /* Slow pulse glow on mobile */
+  .pulse-gold-glow {
+    animation-duration: 4s;
+  }
+
+  /* Disable garnish animations on mobile to save GPU */
+  .animate-garnish-1,
+  .animate-garnish-2 {
+    animation: none !important;
+  }
+}
